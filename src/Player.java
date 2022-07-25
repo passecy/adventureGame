@@ -107,6 +107,8 @@ public class Player {
     public void printInfo(){
         System.out.println("name:"+this.charName+
                 " \tHealth:"+this.getHealth()+
+                " \tArmor:"+this.inventory.getArmor().getName()+
+                " \tBlock:"+this.inventory.getArmor().getBlock()+
                 " \tDamage:"+this.getDamage()+
                 " \tMoney:" +this.getMoney()+
                 " \tweapon:"+this.getInventory().getWeapon().getName());
