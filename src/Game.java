@@ -21,6 +21,9 @@ public class Game {
             System.out.println("Locations:");
             System.out.println("1-Safe House");
             System.out.println("2-Tool Store");
+            System.out.println("3-Cave");
+            System.out.println("4-Forest");
+            System.out.println("5-River");
             System.out.println("Choose the location you want to go:");
             int selectloc=input.nextInt();
             switch (selectloc){
@@ -29,6 +32,15 @@ public class Game {
                     break;
                 case 2:
                     location=new toolStore(player);
+                    break;
+                case 3:
+                    location=new Cave(player);
+                    break;
+                case 4:
+                    location=new Forest(player);
+                    break;
+                case 5:
+                    location=new River(player);
                     break;
                 default:
                     location=new safeHouse(player);
