@@ -8,6 +8,8 @@ public class Player {
     private String name;
     private String charName;
 
+    private int baseHealth;
+
     private Inventory inventory;
 
     public Player(String name){
@@ -17,6 +19,14 @@ public class Player {
 
     public int getDamage(){
         return damage+this.inventory.getWeapon().getDamage();
+    }
+
+    public void setBaseHealth(int baseHealth) {
+        this.baseHealth = baseHealth;
+    }
+
+    public int getBaseHealth() {
+        return baseHealth;
     }
 
     public void setDamage(int damage){
@@ -82,12 +92,7 @@ public class Player {
 
 
         }
-        /*
-        System.out.println("name:"+this.charName+
-                " \tHealth:"+this.getHealth()+
-                " \tDamage:"+this.getDamage()+
-                " \tMoney:" +this.getMoney());
-                */
+
 
 
 
@@ -102,6 +107,7 @@ public class Player {
         this.setCharName(gamechare.getName());
         this.setHealth(gamechare.getHealth());
         this.setMoney(gamechare.getMoney());
+        this.setBaseHealth(gamechare.getHealth());
     }
 
     public void printInfo(){
